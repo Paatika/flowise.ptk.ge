@@ -380,7 +380,7 @@
     {
       "id": "googleGenerativeAiEmbeddings_0",
       "position": {
-        "x": -356.18623760468495,
+        "x": -354.6171962179051,
         "y": -480.81565203276597
       },
       "type": "customNode",
@@ -467,7 +467,7 @@
         ],
         "inputAnchors": [],
         "inputs": {
-          "modelName": "embedding-001",
+          "modelName": "gemini-embedding-001",
           "tasktype": "RETRIEVAL_DOCUMENT",
           "stripNewLines": ""
         },
@@ -487,7 +487,7 @@
       "height": 526,
       "selected": false,
       "positionAbsolute": {
-        "x": -356.18623760468495,
+        "x": -354.6171962179051,
         "y": -480.81565203276597
       },
       "dragging": false
@@ -728,8 +728,8 @@
     {
       "id": "qdrant_0",
       "position": {
-        "x": 231.9501054473614,
-        "y": -728.7078287563558
+        "x": 255.4857262490604,
+        "y": -726.3542666761858
       },
       "type": "customNode",
       "data": {
@@ -921,9 +921,9 @@
           "embeddings": "{{googleGenerativeAiEmbeddings_0.data.instance}}",
           "recordManager": "",
           "qdrantServerUrl": "http://qdrant:6333",
-          "qdrantCollection": "chalicha-vector-store-768",
+          "qdrantCollection": "chalicha-vector-store-3072",
           "fileUpload": "",
-          "qdrantVectorDimension": "768",
+          "qdrantVectorDimension": "3072",
           "contentPayloadKey": "content",
           "metadataPayloadKey": "metadata",
           "batchSize": "",
@@ -966,8 +966,8 @@
       "height": 712,
       "selected": false,
       "positionAbsolute": {
-        "x": 231.9501054473614,
-        "y": -728.7078287563558
+        "x": 255.4857262490604,
+        "y": -726.3542666761858
       },
       "dragging": false
     },
@@ -1291,7 +1291,7 @@
         "selected": false
       },
       "width": 300,
-      "height": 479,
+      "height": 480,
       "selected": false,
       "positionAbsolute": {
         "x": -947.5605453384107,
