@@ -1038,8 +1038,8 @@
     {
       "id": "qdrant_0",
       "position": {
-        "x": 605.08449579488,
-        "y": -784.4589447341148
+        "x": 591.9066414424751,
+        "y": -787.0938999608512
       },
       "type": "customNode",
       "data": {
@@ -1232,9 +1232,9 @@
           "embeddings": "{{googleGenerativeAiEmbeddings_0.data.instance}}",
           "recordManager": "",
           "qdrantServerUrl": "http://qdrant:6333",
-          "qdrantCollection": "beqas-school-vector-768-1",
+          "qdrantCollection": "beqas-school-vector-3072",
           "fileUpload": "",
-          "qdrantVectorDimension": "768",
+          "qdrantVectorDimension": "3072",
           "contentPayloadKey": "content",
           "metadataPayloadKey": "metadata",
           "batchSize": "",
@@ -1277,8 +1277,8 @@
       "height": 712,
       "selected": false,
       "positionAbsolute": {
-        "x": 605.08449579488,
-        "y": -784.4589447341148
+        "x": 591.9066414424751,
+        "y": -787.0938999608512
       },
       "dragging": false
     },
@@ -1489,8 +1489,8 @@
     {
       "id": "googleDrive_1",
       "position": {
-        "x": -207.65175952058286,
-        "y": -1717.9997906703265
+        "x": -337.25706753696034,
+        "y": -1682.2466022520155
       },
       "type": "customNode",
       "data": {
@@ -1698,8 +1698,8 @@
       "height": 1025,
       "selected": false,
       "positionAbsolute": {
-        "x": -207.65175952058286,
-        "y": -1717.9997906703265
+        "x": -337.25706753696034,
+        "y": -1682.2466022520155
       },
       "dragging": false
     },
@@ -1806,7 +1806,7 @@
         "selected": false
       },
       "width": 300,
-      "height": 479,
+      "height": 480,
       "selected": false,
       "positionAbsolute": {
         "x": -947.5605453384107,
@@ -1904,7 +1904,7 @@
         ],
         "inputAnchors": [],
         "inputs": {
-          "modelName": "embedding-001",
+          "modelName": "gemini-embedding-001",
           "tasktype": "RETRIEVAL_DOCUMENT",
           "stripNewLines": ""
         },
