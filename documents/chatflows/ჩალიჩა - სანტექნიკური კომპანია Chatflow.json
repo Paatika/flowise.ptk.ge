@@ -380,8 +380,8 @@
     {
       "id": "googleGenerativeAiEmbeddings_0",
       "position": {
-        "x": -354.6171962179051,
-        "y": -480.81565203276597
+        "x": -783.4437132277075,
+        "y": -602.9662356658612
       },
       "type": "customNode",
       "data": {
@@ -487,8 +487,8 @@
       "height": 526,
       "selected": false,
       "positionAbsolute": {
-        "x": -354.6171962179051,
-        "y": -480.81565203276597
+        "x": -783.4437132277075,
+        "y": -602.9662356658612
       },
       "dragging": false
     },
@@ -592,12 +592,13 @@
         ],
         "inputs": {
           "tools": [
-            "{{retrieverTool_0.data.instance}}"
+            "{{retrieverTool_0.data.instance}}",
+            "{{retrieverTool_1.data.instance}}"
           ],
           "memory": "{{bufferMemory_0.data.instance}}",
           "model": "{{chatGoogleGenerativeAI_0.data.instance}}",
           "chatPromptTemplate": "",
-          "systemMessage": "You are a professional customer service representative for  \"სანტექტნიკური კომპანია ჩალიჩა\". Your primary language is Georgian (ქართული).\n\n**CORE RESPONSIBILITIES:**\n1. Answer questions about services, prices and rules using the `rag_search` tool.\n2. if user gives his name or contact number save them\n3. if user wants to request a service ask him for his name, his contact number and where he wants this service ho receive\n\n**LANGUAGE RULES:**\n- Respond in the language of the user's current question (Georgian, English, or Russian).\n- If the input is ambiguous or just a greeting, default to **Georgian (ქართული)**.\n\n**TOOL USAGE INSTRUCTIONS:**\n- **rag_search:** Use this for questions about prices, services, or company rules.\n\n**როცა მომხმარებელი კითხულობს ფასების შესახებ, პირველ რიგში დააზუსტებინე რა სერვისი სურს და რომელ ქალაქში ან სოფელში სურს ამ სერვისის მიღება. შემდეგ **rag_search**-დან ამოიღე შესაბამისი სერვისის ფასები ქალაქის მიხედვით. თუ პირდაპირ ქალაქის პოვნა ვერ მოხერხდა, მაგრამ სერვისი ფასი წერია გამოიტანე ამ სერვისის ფასი ქალაქის მიუხედავად. თუ სერვისის პოვნა საერთოდ ვერ მოხერხდა ან ქალაქის მიუხედავად მოხდა ფასის გამოტანა, მაგრამ გამოტანილი ტექსტში არაა მოთხოვნილი ტელეფონი და სახელი, მაშინ დაუწერე სერვისცენტრების მდებარეობის ქალაქები და უთხარი, რომ ამ ქალაქებიდან ხდება ახლომდებარე ქალაქებში გასვლა. თუ რომელიმე ამ ქალაქთაგან ახლოსაა მის ადგილმდებარეობასთნა მაშინ შეუძლია იმ ქალაქის ფასებით შეუძლია იხელმძღვანელოს. თუ მომხმარებელი მიგითითებს რომელ ქალაქთანაა ახლოს გამოუტანე იმ ქალაქის ფასები. თუ არცერთ ქალაქთან არაა ახლოს, ასევე ნებისმიერ გაურკვეველ სიტუაციაში, ან იმ შემთხვევაში თუ 2 შეკითხვაზე მეტზე პასუხის გაცემა ვერ შეძელი მოსთხოვე დატოვოს თავისი ტელეფონის ნომერი და სახელი და უთხარი რომ ჩვენი მენეჯერი მალე დაუკავშირდება",
+          "systemMessage": "პროფილის აღწერა: შენ ხარ \"სანტექნიკური კომპანია ჩალიჩას\" პროფესიონალი მომხმარებელთა მხარდაჭერის წარმომადგენელი. შენი მთავარი ენაა ქართული.\n\nძირითადი მოვალეობები:\n\n    უპასუხე კითხვებს სერვისების, ფასების და წესების შესახებ price_calculator და rag_search ხელსაწყოების გამოყენებით.\n\n    თუ მომხმარებელი მოგაწვდის სახელს ან საკონტაქტო ნომერს, აუცილებლად შეინახე ისინი.\n\n    სერვისის მოთხოვნისას, ყოველთვის გამოართვი მომხმარებელს: სახელი, ტელეფონის ნომერი და ზუსტი მისამართი.\n\nინსტრუმენტების (Tools) გამოყენების წესები:\n\n    price_calculator: გამოიყენე ეს ინსტრუმენტი ნებისმიერ დროს, როცა მომხმარებელი ახსენებს სიტყვებს: \"ფასი\", \"ღირებულება\", \"რა ჯდება\", \"აქცია\", \"ფასდაკლება\".\n\n    rag_search: გამოიყენე ეს ინსტრუმენტი ზოგადი ინფორმაციისთვის (სამუშაო საათები, სერვისების აღწერა, გარანტია და კომპანიის წესები).\n\nფასების გაცემის ლოგიკა (მნიშვნელოვანი!):\n\n    ინფორმაციის შეგროვება: სანამ ფასს დაასახელებ, აუცილებლად უნდა იცოდე სერვისი და ლოკაცია.\n\n    სპეციფიკური კითხვები: თუ მომხმარებელი ითხოვს \"შახტების ინსპექტირებას\", არ გასცე ფასი, სანამ არ გეცოდინება სართულების რაოდენობა.\n\n    ლოკაციის ფილტრი:\n\n        თუ ლოკაცია მითითებულია price_calculator-ში, დაასახელე ზუსტი ფასი და აქციები.\n\n        თუ ლოკაცია არის ისეთი ქალაქი, რომელიც არ წერია დოკუმენტში, უთხარი მომხმარებელს: \"ამ ლოკაციაზე ფასის დასაზუსტებლად საჭიროა მენეჯერის კონსულტაცია. გთხოვთ დატოვოთ თქვენი სახელი და ნომერი და მალე დაგიკავშირდებით\".\n\n    გაურკვევლობა: თუ სერვისი საერთოდ ვერ მოიძებნა ან 2-ზე მეტ შეკითხვაზე ვერ გაეცი ზუსტი პასუხი, დაუყოვნებლივ სთხოვე საკონტაქტო ინფორმაცია (სახელი და ნომერი).\n\nენობრივი წესები:\n\n    უპასუხე იმ ენაზე, რომელზეც მომხმარებელი გესაუბრება (ქართული, ინგლისური, რუსული).\n\n    ნაგულისხმევი ენაა ქართული.",
           "inputModeration": "",
           "maxIterations": "",
           "enableDetailedStreaming": false
@@ -626,8 +627,8 @@
     {
       "id": "retrieverTool_0",
       "position": {
-        "x": 972.4747101042881,
-        "y": -738.4313088213058
+        "x": 741.1682857777885,
+        "y": -720.2386687057385
       },
       "type": "customNode",
       "data": {
@@ -699,7 +700,7 @@
         ],
         "inputs": {
           "name": "rag_search",
-          "description": "Use this tool to search for information about services, prices, working hours, address, and comapny's rules. Input should be the user's specific question.",
+          "description": "Use this tool to search for information about services, working hours, address, and comapny's rules. Input should be the user's specific question.",
           "retriever": "{{qdrant_0.data.instance}}",
           "returnSourceDocuments": false,
           "retrieverToolMetadataFilter": ""
@@ -720,8 +721,8 @@
       "height": 662,
       "selected": false,
       "positionAbsolute": {
-        "x": 972.4747101042881,
-        "y": -738.4313088213058
+        "x": 741.1682857777885,
+        "y": -720.2386687057385
       },
       "dragging": false
     },
@@ -974,8 +975,8 @@
     {
       "id": "googleDrive_1",
       "position": {
-        "x": -321.41200466534366,
-        "y": -1604.0491074824847
+        "x": -313.61515890152907,
+        "y": -1076.4625441310307
       },
       "type": "customNode",
       "data": {
@@ -1183,16 +1184,16 @@
       "height": 1025,
       "selected": false,
       "positionAbsolute": {
-        "x": -321.41200466534366,
-        "y": -1604.0491074824847
+        "x": -313.61515890152907,
+        "y": -1076.4625441310307
       },
       "dragging": false
     },
     {
       "id": "markdownTextSplitter_0",
       "position": {
-        "x": -947.5605453384107,
-        "y": -1367.9576611755683
+        "x": -786.4257328862426,
+        "y": -1147.0470312008215
       },
       "type": "customNode",
       "data": {
@@ -1294,8 +1295,799 @@
       "height": 480,
       "selected": false,
       "positionAbsolute": {
-        "x": -947.5605453384107,
-        "y": -1367.9576611755683
+        "x": -786.4257328862426,
+        "y": -1147.0470312008215
+      },
+      "dragging": false
+    },
+    {
+      "id": "markdownTextSplitter_1",
+      "position": {
+        "x": -748.2995634388262,
+        "y": -2287.9854613056896
+      },
+      "type": "customNode",
+      "data": {
+        "id": "markdownTextSplitter_1",
+        "label": "Markdown Text Splitter (1)",
+        "version": 1.1,
+        "name": "markdownTextSplitter",
+        "type": "MarkdownTextSplitter",
+        "baseClasses": [
+          "MarkdownTextSplitter",
+          "RecursiveCharacterTextSplitter",
+          "TextSplitter",
+          "BaseDocumentTransformer",
+          "Runnable"
+        ],
+        "category": "Text Splitters",
+        "description": "Split your content into documents based on the Markdown headers",
+        "inputParams": [
+          {
+            "label": "Chunk Size",
+            "name": "chunkSize",
+            "type": "number",
+            "description": "Number of characters in each chunk. Default is 1000.",
+            "default": 1000,
+            "optional": true,
+            "id": "markdownTextSplitter_1-input-chunkSize-number",
+            "display": true
+          },
+          {
+            "label": "Chunk Overlap",
+            "name": "chunkOverlap",
+            "type": "number",
+            "description": "Number of characters to overlap between chunks. Default is 200.",
+            "default": 200,
+            "optional": true,
+            "id": "markdownTextSplitter_1-input-chunkOverlap-number",
+            "display": true
+          },
+          {
+            "label": "Split by Headers",
+            "name": "splitByHeaders",
+            "type": "options",
+            "description": "Split documents at specified header levels. Headers will be included with their content.",
+            "default": "disabled",
+            "options": [
+              {
+                "label": "Disabled",
+                "name": "disabled"
+              },
+              {
+                "label": "# Headers (H1)",
+                "name": "h1"
+              },
+              {
+                "label": "## Headers (H2)",
+                "name": "h2"
+              },
+              {
+                "label": "### Headers (H3)",
+                "name": "h3"
+              },
+              {
+                "label": "#### Headers (H4)",
+                "name": "h4"
+              },
+              {
+                "label": "##### Headers (H5)",
+                "name": "h5"
+              },
+              {
+                "label": "###### Headers (H6)",
+                "name": "h6"
+              }
+            ],
+            "optional": true,
+            "id": "markdownTextSplitter_1-input-splitByHeaders-options",
+            "display": true
+          }
+        ],
+        "inputAnchors": [],
+        "inputs": {
+          "chunkSize": "500",
+          "chunkOverlap": "150",
+          "splitByHeaders": "h2"
+        },
+        "outputAnchors": [
+          {
+            "id": "markdownTextSplitter_1-output-markdownTextSplitter-MarkdownTextSplitter|RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable",
+            "name": "markdownTextSplitter",
+            "label": "MarkdownTextSplitter",
+            "description": "Split your content into documents based on the Markdown headers",
+            "type": "MarkdownTextSplitter | RecursiveCharacterTextSplitter | TextSplitter | BaseDocumentTransformer | Runnable"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "width": 300,
+      "height": 480,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -748.2995634388262,
+        "y": -2287.9854613056896
+      },
+      "dragging": false
+    },
+    {
+      "id": "googleGenerativeAiEmbeddings_1",
+      "position": {
+        "x": -760.9112353079203,
+        "y": -1767.2952030621734
+      },
+      "type": "customNode",
+      "data": {
+        "id": "googleGenerativeAiEmbeddings_1",
+        "label": "GoogleGenerativeAI Embeddings (1)",
+        "version": 2,
+        "name": "googleGenerativeAiEmbeddings",
+        "type": "GoogleGenerativeAiEmbeddings",
+        "baseClasses": [
+          "GoogleGenerativeAiEmbeddings",
+          "GoogleGenerativeAIEmbeddings",
+          "Embeddings"
+        ],
+        "category": "Embeddings",
+        "description": "Google Generative API to generate embeddings for a given text",
+        "inputParams": [
+          {
+            "label": "Connect Credential",
+            "name": "credential",
+            "type": "credential",
+            "credentialNames": [
+              "googleGenerativeAI"
+            ],
+            "optional": false,
+            "description": "Google Generative AI credential.",
+            "id": "googleGenerativeAiEmbeddings_1-input-credential-credential",
+            "display": true
+          },
+          {
+            "label": "Model Name",
+            "name": "modelName",
+            "type": "asyncOptions",
+            "loadMethod": "listModels",
+            "default": "embedding-001",
+            "id": "googleGenerativeAiEmbeddings_1-input-modelName-asyncOptions",
+            "display": true
+          },
+          {
+            "label": "Task Type",
+            "name": "tasktype",
+            "type": "options",
+            "description": "Type of task for which the embedding will be used",
+            "options": [
+              {
+                "label": "TASK_TYPE_UNSPECIFIED",
+                "name": "TASK_TYPE_UNSPECIFIED"
+              },
+              {
+                "label": "RETRIEVAL_QUERY",
+                "name": "RETRIEVAL_QUERY"
+              },
+              {
+                "label": "RETRIEVAL_DOCUMENT",
+                "name": "RETRIEVAL_DOCUMENT"
+              },
+              {
+                "label": "SEMANTIC_SIMILARITY",
+                "name": "SEMANTIC_SIMILARITY"
+              },
+              {
+                "label": "CLASSIFICATION",
+                "name": "CLASSIFICATION"
+              },
+              {
+                "label": "CLUSTERING",
+                "name": "CLUSTERING"
+              }
+            ],
+            "default": "TASK_TYPE_UNSPECIFIED",
+            "id": "googleGenerativeAiEmbeddings_1-input-tasktype-options",
+            "display": true
+          },
+          {
+            "label": "Strip New Lines",
+            "name": "stripNewLines",
+            "type": "boolean",
+            "optional": true,
+            "additionalParams": true,
+            "description": "Remove new lines from input text before embedding to reduce token count",
+            "id": "googleGenerativeAiEmbeddings_1-input-stripNewLines-boolean",
+            "display": true
+          }
+        ],
+        "inputAnchors": [],
+        "inputs": {
+          "modelName": "gemini-embedding-001",
+          "tasktype": "RETRIEVAL_DOCUMENT",
+          "stripNewLines": ""
+        },
+        "outputAnchors": [
+          {
+            "id": "googleGenerativeAiEmbeddings_1-output-googleGenerativeAiEmbeddings-GoogleGenerativeAiEmbeddings|GoogleGenerativeAIEmbeddings|Embeddings",
+            "name": "googleGenerativeAiEmbeddings",
+            "label": "GoogleGenerativeAiEmbeddings",
+            "description": "Google Generative API to generate embeddings for a given text",
+            "type": "GoogleGenerativeAiEmbeddings | GoogleGenerativeAIEmbeddings | Embeddings"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "width": 300,
+      "height": 526,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -760.9112353079203,
+        "y": -1767.2952030621734
+      },
+      "dragging": false
+    },
+    {
+      "id": "googleDrive_0",
+      "position": {
+        "x": -337.86375556462946,
+        "y": -2282.374688934354
+      },
+      "type": "customNode",
+      "data": {
+        "id": "googleDrive_0",
+        "label": "Google Drive (0)",
+        "version": 1,
+        "name": "googleDrive",
+        "type": "Document",
+        "baseClasses": [
+          "Document"
+        ],
+        "category": "Document Loaders",
+        "description": "Load documents from Google Drive files",
+        "inputParams": [
+          {
+            "label": "Connect Credential",
+            "name": "credential",
+            "type": "credential",
+            "description": "Google Drive OAuth2 Credential",
+            "credentialNames": [
+              "googleDriveOAuth2"
+            ],
+            "id": "googleDrive_0-input-credential-credential",
+            "display": true
+          },
+          {
+            "label": "Select Files",
+            "name": "selectedFiles",
+            "type": "asyncMultiOptions",
+            "loadMethod": "listFiles",
+            "description": "Select files from your Google Drive",
+            "refresh": true,
+            "optional": true,
+            "id": "googleDrive_0-input-selectedFiles-asyncMultiOptions",
+            "display": true
+          },
+          {
+            "label": "Folder ID",
+            "name": "folderId",
+            "type": "string",
+            "description": "Google Drive folder ID to load all files from (alternative to selecting specific files)",
+            "placeholder": "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms",
+            "optional": true,
+            "id": "googleDrive_0-input-folderId-string",
+            "display": true
+          },
+          {
+            "label": "File Types",
+            "name": "fileTypes",
+            "type": "multiOptions",
+            "description": "Types of files to load",
+            "options": [
+              {
+                "label": "Google Docs",
+                "name": "application/vnd.google-apps.document"
+              },
+              {
+                "label": "Google Sheets",
+                "name": "application/vnd.google-apps.spreadsheet"
+              },
+              {
+                "label": "Google Slides",
+                "name": "application/vnd.google-apps.presentation"
+              },
+              {
+                "label": "PDF Files",
+                "name": "application/pdf"
+              },
+              {
+                "label": "Text Files",
+                "name": "text/plain"
+              },
+              {
+                "label": "Word Documents",
+                "name": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+              },
+              {
+                "label": "PowerPoint",
+                "name": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+              },
+              {
+                "label": "Excel Files",
+                "name": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+              }
+            ],
+            "default": [
+              "application/vnd.google-apps.document",
+              "application/vnd.google-apps.spreadsheet",
+              "application/vnd.google-apps.presentation",
+              "text/plain",
+              "application/pdf",
+              "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+              "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+              "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            ],
+            "optional": true,
+            "id": "googleDrive_0-input-fileTypes-multiOptions",
+            "display": true
+          },
+          {
+            "label": "Include Subfolders",
+            "name": "includeSubfolders",
+            "type": "boolean",
+            "description": "Whether to include files from subfolders when loading from a folder",
+            "default": false,
+            "optional": true,
+            "id": "googleDrive_0-input-includeSubfolders-boolean",
+            "display": true
+          },
+          {
+            "label": "Include Shared Drives",
+            "name": "includeSharedDrives",
+            "type": "boolean",
+            "description": "Whether to include files from shared drives (Team Drives) that you have access to",
+            "default": false,
+            "optional": true,
+            "id": "googleDrive_0-input-includeSharedDrives-boolean",
+            "display": true
+          },
+          {
+            "label": "Max Files",
+            "name": "maxFiles",
+            "type": "number",
+            "description": "Maximum number of files to load (default: 50)",
+            "default": 50,
+            "optional": true,
+            "id": "googleDrive_0-input-maxFiles-number",
+            "display": true
+          },
+          {
+            "label": "Additional Metadata",
+            "name": "metadata",
+            "type": "json",
+            "description": "Additional metadata to be added to the extracted documents",
+            "optional": true,
+            "additionalParams": true,
+            "id": "googleDrive_0-input-metadata-json",
+            "display": true
+          },
+          {
+            "label": "Omit Metadata Keys",
+            "name": "omitMetadataKeys",
+            "type": "string",
+            "rows": 4,
+            "description": "Each document loader comes with a default set of metadata keys that are extracted from the document. You can use this field to omit some of the default metadata keys. The value should be a list of keys, seperated by comma. Use * to omit all metadata keys execept the ones you specify in the Additional Metadata field",
+            "placeholder": "key1, key2, key3.nestedKey1",
+            "optional": true,
+            "additionalParams": true,
+            "id": "googleDrive_0-input-omitMetadataKeys-string",
+            "display": true
+          }
+        ],
+        "inputAnchors": [
+          {
+            "label": "Text Splitter",
+            "name": "textSplitter",
+            "type": "TextSplitter",
+            "optional": true,
+            "id": "googleDrive_0-input-textSplitter-TextSplitter",
+            "display": true
+          }
+        ],
+        "inputs": {
+          "selectedFiles": "[\"1P5FJl4kYEW2igneZnYG1DFLhhtZ_bUrrg5D4xq_4oL4\"]",
+          "folderId": "",
+          "fileTypes": "[\"application/vnd.google-apps.document\"]",
+          "includeSubfolders": "",
+          "includeSharedDrives": "",
+          "maxFiles": 50,
+          "textSplitter": "{{markdownTextSplitter_1.data.instance}}",
+          "metadata": "",
+          "omitMetadataKeys": ""
+        },
+        "outputAnchors": [
+          {
+            "name": "output",
+            "label": "Output",
+            "type": "options",
+            "description": "Array of document objects containing metadata and pageContent",
+            "options": [
+              {
+                "id": "googleDrive_0-output-document-Document|json",
+                "name": "document",
+                "label": "Document",
+                "description": "Array of document objects containing metadata and pageContent",
+                "type": "Document | json"
+              },
+              {
+                "id": "googleDrive_0-output-text-string|json",
+                "name": "text",
+                "label": "Text",
+                "description": "Concatenated string from pageContent of documents",
+                "type": "string | json"
+              }
+            ],
+            "default": "document"
+          }
+        ],
+        "outputs": {
+          "output": "document"
+        },
+        "selected": false
+      },
+      "width": 300,
+      "height": 1025,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -337.86375556462946,
+        "y": -2282.374688934354
+      },
+      "dragging": false
+    },
+    {
+      "id": "qdrant_1",
+      "position": {
+        "x": 241.63292393771286,
+        "y": -2023.2296120573462
+      },
+      "type": "customNode",
+      "data": {
+        "id": "qdrant_1",
+        "label": "Qdrant (1)",
+        "version": 5,
+        "name": "qdrant",
+        "type": "Qdrant",
+        "baseClasses": [
+          "Qdrant",
+          "VectorStoreRetriever",
+          "BaseRetriever"
+        ],
+        "category": "Vector Stores",
+        "description": "Upsert embedded data and perform similarity search upon query using Qdrant, a scalable open source vector database written in Rust",
+        "inputParams": [
+          {
+            "label": "Connect Credential",
+            "name": "credential",
+            "type": "credential",
+            "description": "Only needed when using Qdrant cloud hosted",
+            "optional": true,
+            "credentialNames": [
+              "qdrantApi"
+            ],
+            "id": "qdrant_1-input-credential-credential",
+            "display": true
+          },
+          {
+            "label": "Qdrant Server URL",
+            "name": "qdrantServerUrl",
+            "type": "string",
+            "placeholder": "http://localhost:6333",
+            "id": "qdrant_1-input-qdrantServerUrl-string",
+            "display": true
+          },
+          {
+            "label": "Qdrant Collection Name",
+            "name": "qdrantCollection",
+            "type": "string",
+            "acceptVariable": true,
+            "id": "qdrant_1-input-qdrantCollection-string",
+            "display": true
+          },
+          {
+            "label": "File Upload",
+            "name": "fileUpload",
+            "description": "Allow file upload on the chat",
+            "hint": {
+              "label": "How to use",
+              "value": "\n**File Upload**\n\nThis allows file upload on the chat. Uploaded files will be upserted on the fly to the vector store.\n\n**Note:**\n- You can only turn on file upload for one vector store at a time.\n- At least one Document Loader node should be connected to the document input.\n- Document Loader should be file types like PDF, DOCX, TXT, etc.\n\n**How it works**\n- Uploaded files will have the metadata updated with the chatId.\n- This will allow the file to be associated with the chatId.\n- When querying, metadata will be filtered by chatId to retrieve files associated with the chatId.\n"
+            },
+            "type": "boolean",
+            "additionalParams": true,
+            "optional": true,
+            "id": "qdrant_1-input-fileUpload-boolean",
+            "display": true
+          },
+          {
+            "label": "Vector Dimension",
+            "name": "qdrantVectorDimension",
+            "type": "number",
+            "default": 1536,
+            "additionalParams": true,
+            "id": "qdrant_1-input-qdrantVectorDimension-number",
+            "display": true
+          },
+          {
+            "label": "Content Key",
+            "name": "contentPayloadKey",
+            "description": "The key for storing text. Default to `content`",
+            "type": "string",
+            "default": "content",
+            "optional": true,
+            "additionalParams": true,
+            "id": "qdrant_1-input-contentPayloadKey-string",
+            "display": true
+          },
+          {
+            "label": "Metadata Key",
+            "name": "metadataPayloadKey",
+            "description": "The key for storing metadata. Default to `metadata`",
+            "type": "string",
+            "default": "metadata",
+            "optional": true,
+            "additionalParams": true,
+            "id": "qdrant_1-input-metadataPayloadKey-string",
+            "display": true
+          },
+          {
+            "label": "Upsert Batch Size",
+            "name": "batchSize",
+            "type": "number",
+            "step": 1,
+            "description": "Upsert in batches of size N",
+            "additionalParams": true,
+            "optional": true,
+            "id": "qdrant_1-input-batchSize-number",
+            "display": true
+          },
+          {
+            "label": "Similarity",
+            "name": "qdrantSimilarity",
+            "description": "Similarity measure used in Qdrant.",
+            "type": "options",
+            "default": "Cosine",
+            "options": [
+              {
+                "label": "Cosine",
+                "name": "Cosine"
+              },
+              {
+                "label": "Euclid",
+                "name": "Euclid"
+              },
+              {
+                "label": "Dot",
+                "name": "Dot"
+              }
+            ],
+            "additionalParams": true,
+            "id": "qdrant_1-input-qdrantSimilarity-options",
+            "display": true
+          },
+          {
+            "label": "Additional Collection Cofiguration",
+            "name": "qdrantCollectionConfiguration",
+            "description": "Refer to <a target=\"_blank\" href=\"https://qdrant.tech/documentation/concepts/collections\">collection docs</a> for more reference",
+            "type": "json",
+            "optional": true,
+            "additionalParams": true,
+            "id": "qdrant_1-input-qdrantCollectionConfiguration-json",
+            "display": true
+          },
+          {
+            "label": "Top K",
+            "name": "topK",
+            "description": "Number of top results to fetch. Default to 4",
+            "placeholder": "4",
+            "type": "number",
+            "additionalParams": true,
+            "optional": true,
+            "id": "qdrant_1-input-topK-number",
+            "display": true
+          },
+          {
+            "label": "Qdrant Search Filter",
+            "name": "qdrantFilter",
+            "description": "Only return points which satisfy the conditions",
+            "type": "json",
+            "additionalParams": true,
+            "optional": true,
+            "acceptVariable": true,
+            "id": "qdrant_1-input-qdrantFilter-json",
+            "display": true
+          }
+        ],
+        "inputAnchors": [
+          {
+            "label": "Document",
+            "name": "document",
+            "type": "Document",
+            "list": true,
+            "optional": true,
+            "id": "qdrant_1-input-document-Document",
+            "display": true
+          },
+          {
+            "label": "Embeddings",
+            "name": "embeddings",
+            "type": "Embeddings",
+            "id": "qdrant_1-input-embeddings-Embeddings",
+            "display": true
+          },
+          {
+            "label": "Record Manager",
+            "name": "recordManager",
+            "type": "RecordManager",
+            "description": "Keep track of the record to prevent duplication",
+            "optional": true,
+            "id": "qdrant_1-input-recordManager-RecordManager",
+            "display": true
+          }
+        ],
+        "inputs": {
+          "document": [
+            "{{googleDrive_0.data.instance}}"
+          ],
+          "embeddings": "{{googleGenerativeAiEmbeddings_1.data.instance}}",
+          "recordManager": "",
+          "qdrantServerUrl": "http://qdrant:6333",
+          "qdrantCollection": "chalicha-prices--vector-store-3072",
+          "fileUpload": "",
+          "qdrantVectorDimension": "3072",
+          "contentPayloadKey": "content",
+          "metadataPayloadKey": "metadata",
+          "batchSize": "",
+          "qdrantSimilarity": "Cosine",
+          "qdrantCollectionConfiguration": "",
+          "topK": "5",
+          "qdrantFilter": ""
+        },
+        "outputAnchors": [
+          {
+            "name": "output",
+            "label": "Output",
+            "type": "options",
+            "description": "",
+            "options": [
+              {
+                "id": "qdrant_1-output-retriever-Qdrant|VectorStoreRetriever|BaseRetriever",
+                "name": "retriever",
+                "label": "Qdrant Retriever",
+                "description": "",
+                "type": "Qdrant | VectorStoreRetriever | BaseRetriever"
+              },
+              {
+                "id": "qdrant_1-output-vectorStore-Qdrant|VectorStore",
+                "name": "vectorStore",
+                "label": "Qdrant Vector Store",
+                "description": "",
+                "type": "Qdrant | VectorStore"
+              }
+            ],
+            "default": "retriever"
+          }
+        ],
+        "outputs": {
+          "output": "retriever"
+        },
+        "selected": false
+      },
+      "width": 300,
+      "height": 712,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 241.63292393771286,
+        "y": -2023.2296120573462
+      },
+      "dragging": false
+    },
+    {
+      "id": "retrieverTool_1",
+      "position": {
+        "x": 670.1386145318005,
+        "y": -1972.9318880919498
+      },
+      "type": "customNode",
+      "data": {
+        "id": "retrieverTool_1",
+        "label": "Retriever Tool (1)",
+        "version": 3,
+        "name": "retrieverTool",
+        "type": "RetrieverTool",
+        "baseClasses": [
+          "RetrieverTool",
+          "DynamicTool",
+          "Tool",
+          "StructuredTool",
+          "Runnable"
+        ],
+        "category": "Tools",
+        "description": "Use a retriever as allowed tool for agent",
+        "inputParams": [
+          {
+            "label": "Retriever Name",
+            "name": "name",
+            "type": "string",
+            "placeholder": "search_state_of_union",
+            "id": "retrieverTool_1-input-name-string",
+            "display": true
+          },
+          {
+            "label": "Retriever Description",
+            "name": "description",
+            "type": "string",
+            "description": "When should agent uses to retrieve documents",
+            "rows": 3,
+            "placeholder": "Searches and returns documents regarding the state-of-the-union.",
+            "id": "retrieverTool_1-input-description-string",
+            "display": true
+          },
+          {
+            "label": "Return Source Documents",
+            "name": "returnSourceDocuments",
+            "type": "boolean",
+            "optional": true,
+            "id": "retrieverTool_1-input-returnSourceDocuments-boolean",
+            "display": true
+          },
+          {
+            "label": "Additional Metadata Filter",
+            "name": "retrieverToolMetadataFilter",
+            "type": "json",
+            "description": "Add additional metadata filter on top of the existing filter from vector store",
+            "optional": true,
+            "additionalParams": true,
+            "hint": {
+              "label": "What can you filter?",
+              "value": "Add additional filters to vector store. You can also filter with flow config, including the current \"state\":\n- `$flow.sessionId`\n- `$flow.chatId`\n- `$flow.chatflowId`\n- `$flow.input`\n- `$flow.state`\n"
+            },
+            "acceptVariable": true,
+            "id": "retrieverTool_1-input-retrieverToolMetadataFilter-json",
+            "display": true
+          }
+        ],
+        "inputAnchors": [
+          {
+            "label": "Retriever",
+            "name": "retriever",
+            "type": "BaseRetriever",
+            "id": "retrieverTool_1-input-retriever-BaseRetriever",
+            "display": true
+          }
+        ],
+        "inputs": {
+          "name": "price_calculator",
+          "description": "Use this tool ONLY for pricing, discounts, and quotes. Requires location and service name.",
+          "retriever": "{{qdrant_1.data.instance}}",
+          "returnSourceDocuments": false,
+          "retrieverToolMetadataFilter": ""
+        },
+        "outputAnchors": [
+          {
+            "id": "retrieverTool_1-output-retrieverTool-RetrieverTool|DynamicTool|Tool|StructuredTool|Runnable",
+            "name": "retrieverTool",
+            "label": "RetrieverTool",
+            "description": "Use a retriever as allowed tool for agent",
+            "type": "RetrieverTool | DynamicTool | Tool | StructuredTool | Runnable"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "width": 300,
+      "height": 662,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 670.1386145318005,
+        "y": -1972.9318880919498
       },
       "dragging": false
     }
@@ -1364,6 +2156,46 @@
       "targetHandle": "googleDrive_1-input-textSplitter-TextSplitter",
       "type": "buttonedge",
       "id": "markdownTextSplitter_0-markdownTextSplitter_0-output-markdownTextSplitter-MarkdownTextSplitter|RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable-googleDrive_1-googleDrive_1-input-textSplitter-TextSplitter"
+    },
+    {
+      "source": "markdownTextSplitter_1",
+      "sourceHandle": "markdownTextSplitter_1-output-markdownTextSplitter-MarkdownTextSplitter|RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable",
+      "target": "googleDrive_0",
+      "targetHandle": "googleDrive_0-input-textSplitter-TextSplitter",
+      "type": "buttonedge",
+      "id": "markdownTextSplitter_1-markdownTextSplitter_1-output-markdownTextSplitter-MarkdownTextSplitter|RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable-googleDrive_0-googleDrive_0-input-textSplitter-TextSplitter"
+    },
+    {
+      "source": "googleGenerativeAiEmbeddings_1",
+      "sourceHandle": "googleGenerativeAiEmbeddings_1-output-googleGenerativeAiEmbeddings-GoogleGenerativeAiEmbeddings|GoogleGenerativeAIEmbeddings|Embeddings",
+      "target": "qdrant_1",
+      "targetHandle": "qdrant_1-input-embeddings-Embeddings",
+      "type": "buttonedge",
+      "id": "googleGenerativeAiEmbeddings_1-googleGenerativeAiEmbeddings_1-output-googleGenerativeAiEmbeddings-GoogleGenerativeAiEmbeddings|GoogleGenerativeAIEmbeddings|Embeddings-qdrant_1-qdrant_1-input-embeddings-Embeddings"
+    },
+    {
+      "source": "googleDrive_0",
+      "sourceHandle": "googleDrive_0-output-document-Document|json",
+      "target": "qdrant_1",
+      "targetHandle": "qdrant_1-input-document-Document",
+      "type": "buttonedge",
+      "id": "googleDrive_0-googleDrive_0-output-document-Document|json-qdrant_1-qdrant_1-input-document-Document"
+    },
+    {
+      "source": "qdrant_1",
+      "sourceHandle": "qdrant_1-output-retriever-Qdrant|VectorStoreRetriever|BaseRetriever",
+      "target": "retrieverTool_1",
+      "targetHandle": "retrieverTool_1-input-retriever-BaseRetriever",
+      "type": "buttonedge",
+      "id": "qdrant_1-qdrant_1-output-retriever-Qdrant|VectorStoreRetriever|BaseRetriever-retrieverTool_1-retrieverTool_1-input-retriever-BaseRetriever"
+    },
+    {
+      "source": "retrieverTool_1",
+      "sourceHandle": "retrieverTool_1-output-retrieverTool-RetrieverTool|DynamicTool|Tool|StructuredTool|Runnable",
+      "target": "toolAgent_0",
+      "targetHandle": "toolAgent_0-input-tools-Tool",
+      "type": "buttonedge",
+      "id": "retrieverTool_1-retrieverTool_1-output-retrieverTool-RetrieverTool|DynamicTool|Tool|StructuredTool|Runnable-toolAgent_0-toolAgent_0-input-tools-Tool"
     }
   ]
 }
