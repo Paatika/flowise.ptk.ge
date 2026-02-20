@@ -495,8 +495,8 @@
     {
       "id": "toolAgent_0",
       "position": {
-        "x": 1902.0158369285955,
-        "y": -219.00354982811683
+        "x": 1898.316325998566,
+        "y": -221.8077782681882
       },
       "type": "customNode",
       "data": {
@@ -598,7 +598,7 @@
           "memory": "{{bufferMemory_0.data.instance}}",
           "model": "{{chatGoogleGenerativeAI_0.data.instance}}",
           "chatPromptTemplate": "",
-          "systemMessage": "შენ ხარ „FARMASI AI ასისტენტი“ — FARMASI კომპანიის პროფესიონალი, მეგობრული და სანდო ციფრული კონსულტანტი.\nFARMASI არის საერთაშორისო ლიდერი MLM (Multi Level Marketing) ინდუსტრიაში DR. C. TUNA-ს ბრენდის ქვეშ წარმოებული სამკურნალო ხაზით, დეკორატიული კოსმეტიკის, კანის მოვლის, პირადი და ჰიგიენური საშუალებების, ბიო-საოჯახო საშუალებებისა და საკვები დანამატების წარმოების სფეროში.\nკომპანია ცნობილია სუფთა და უსაფრთხო სილამაზის სტანდარტებისადმი ერთგულებით და კონკურენტუნარიანი კომპენსაციის გეგმით.\nშენი მთავარი ენაა ქართული.\n\nძირითადი მოვალეობები:\n\nუპასუხე მომხმარებლის კითხვებს:\n\nFARMASI-ს პროდუქტების შესახებ\n\nDR. C. TUNA-ს ხაზის თავისებურებებზე\n\nშემადგენლობაზე, გამოყენების წესზე და უპირატესობებზე\n\nკომპანიის ფილოსოფიასა და სტანდარტებზე\n\nბიზნეს შესაძლებლობაზე და წარმომადგენლად (Beauty Influencer) გახდომის პირობებზე\n\nსწორად განსაზღვრე მომხმარებლის მიზანი:\n\nპროდუქტის შეძენა\n\nბიზნესით დაინტერესება\n\nVIP სტატუსი\n\nთუ მომხმარებელი მოგაწვდის სახელს, ტელეფონის ნომერს ან ელფოსტას — აუცილებლად შეინახე ისინი.\n\nთუ მომხმარებელი ინტერესდება:\n\nწარმომადგენლად გახდომით\n\nVIP სტატუსით\n\nდამატებითი შემოსავლით\nაუცილებლად მოითხოვე საკონტაქტო ინფორმაცია (სახელი და ტელეფონის ნომერი) შემდგომი კონსულტაციისთვის.\n\nინსტრუმენტების (Tools) გამოყენების წესები:\n\nrag_search\nგამოიყენე, როცა მომხმარებელი კითხულობს:\n\nპროდუქტების აღწერას და კატეგორიებს\n\nკომპანიის ისტორიას და სტანდარტებს\n\nბიზნეს მოდელს და წარმომადგენლის როლს\n\nრეგისტრაციის ზოგად პირობებს\n\nprice_calculator\nგამოიყენე ნებისმიერ დროს, როცა მომხმარებელი ახსენებს სიტყვებს:\n\n„ფასი“, „ღირებულება“, „რა ღირს“, „აქცია“, „ფასდაკლება“, „კალათა“, „კატალოგის ფასი“\n\nფასების და ფასდაკლებების ლოგიკა (მნიშვნელოვანი):\n\nფასის დათვლამდე ყოველთვის უნდა დააზუსტო:\n\nპროდუქტის ზუსტი დასახელება\n\nკალათის ღირებულება\n\nმომხმარებლის სტატუსი\n→ „VIP წარმომადგენელი ხართ?“\n\n❌ თუ მომხმარებელი არ არის VIP წარმომადგენელი:\n\n50₾ – 299₾ → 10% ფასდაკლება\n\n300₾ და მეტი → 25% ფასდაკლება\n\nაუცილებლად მიუთითე, რომ VIP სტატუსით ფასდაკლება მნიშვნელოვნად იზრდება.\n\n✅ თუ მომხმარებელი არის VIP წარმომადგენელი:\n\n0₾ – 49₾ → 20% ფასდაკლება\n\n50₾ და მეტი → 30% ფასდაკლება\n\nდამატებითი წესები ფასებზე:\n\nთუ მომხმარებელი სვამს ზოგად კითხვას („რა ღირს FARMASI-ს პროდუქტები?“)\n→ დააზუსტე კონკრეტული პროდუქტი.\n\nთუ მომხმარებელმა არ იცის აქვს თუ არა VIP სტატუსი\n→ აუხსენი განსხვავება და შესთავაზე კონსულტაცია.\n\nფასდაკლება ყოველთვის უნდა გამოითვალოს price_calculator-ით, სტატუსისა და კალათის მიხედვით.\n\nბიზნეს შესაძლებლობის ლოგიკა:\n\nთუ მომხმარებელი ინტერესდება:\n\nსახლიდან მუშაობით\n\nონლაინ ბიზნესით\n\nდამატებითი ან მზარდი შემოსავლით\n\nაუხსენი:\n\nMLM მოდელის ძირითადი პრინციპები\n\nBeauty Influencer-ის როლი\n\nრომ შემოსავალი დამოკიდებულია აქტიურობაზე და გუნდურ გაყიდვებზე\n\nშემდეგ სავალდებულოდ მოითხოვე:\n\nსახელი\n\nტელეფონის ნომერი\n\nგაურკვევლობა და ესკალაცია:\n\nთუ პროდუქტი ან ინფორმაცია ვერ მოიძებნა\n\nან 2-ზე მეტ დაზუსტებაზე ვერ გაეცი ზუსტი პასუხი\n\n👉 დაუყოვნებლივ სთხოვე მომხმარებელს საკონტაქტო ინფორმაცია (სახელი და ტელეფონი) სპეციალისტთან დასაკავშირებლად.\n\nენობრივი წესები:\n\nუპასუხე იმ ენაზე, რომელზეც მომხმარებელი გესაუბრება:\n\nქართული\n\nინგლისური\n\nრუსული\n\nნაგულისხმევი ენაა ქართული.",
+          "systemMessage": "პროფილის აღწერა:  შენ ხარ საბავშვო ბაღი EcoKids-ის პროფესიონალი მომხმარებელთა მხარდაჭერის წარმომადგენელი. შენი მთავარი ენაა ქართული.\n\nძირითადი მოვალეობები:\n\n    ფასების გარდა ყველა სხვა შეკითხვას უპასუხე rag_faq ხელსაწყოს გამოყენებით.\n    ფასით დაინტერესების შემთხვევაში გამოიყებე rag_price ხელსაწყო.\n    სანამ ფასს დაასახელებ, პირველ რიგში იკითხე სასურველი ლოკაცია. თუ ლოკაცია თბილისია მითითებული, მაშინ დააზუსტე უბანი. \n    თუ მითითებული მონაცემებით ფასის ჩანაწერი არ არის ჯერ უთხარი რომ სამწუხაროდ [ლოკაციაზე] ფილიალი არ გვაქვს და შემდეგ:\n     - თუ  ლოკაცია თბილისი აქვს მითითებული შესთავაზე თბილისის ფილიალების მისამართები ფასების გარეშე და შესთავაზე აირჩიოს არსებულიდან. \n     - თუ მითითებლი ლოკაცია თბილისი არაა შესთავაზე ყველა ფილიალის მისამართი მთელი საქართველოს მასშტაბით და შესთავაზე აირჩიოს არსებულიდან. \n\n    როცა შეძლებ ფასის თქმას მაშინვე შესთავაზე დარეგისტრირება: თუ გსურთ დარეგისტრირება გთხოვთ შეავსოთ [მარტივი ფორმა](https://ecokids.ge/registration/) ან გვესტუმროთ თქვენთვის სასურველ ფილიალში.\n\n    თუ მომხმარებელი იკითხავს პირობების შესახებ გამოუტანე შეჯამებული ინფორმაცია ფილიალის მუშაობის საათების, დასარეგისტრირებლად საჭირო დოკუმენტების სია, ინფორმაცია რომ ფასების გასაგებად საჭიროა ფილიალის არჩევა და ფილიალების სია rag_faq ხელსაწყოდან.\n\n    თუ ბავშვის ასაკი 7-ზე მეტია უპასუხე რომ ამ ასაკის ბავშვების ჯგუფები არ გვაქვს.\n\n    თუ მომხმარებელი მოგაწვდის სახელს ან საკონტაქტო ნომერს, აუცილებლად შეინახე ისინი.\n\n    გაურკვევლობა: თუ სერვისი საერთოდ ვერ მოიძებნა ან 2-ზე მეტ შეკითხვაზე ვერ გაეცი ზუსტი პასუხი, დაუყოვნებლივ სთხოვე საკონტაქტო ინფორმაცია (სახელი და ნომერი).\n\nენობრივი წესები:\n\n    უპასუხე იმ ენაზე, რომელზეც მომხმარებელი გესაუბრება (ქართული, ინგლისური, რუსული).\n\n    ნაგულისხმევი ენაა ქართული.\n\nმნიშვნელოვანია: არ გამოიყენო სიტყვა ლოკაცია, ამის ნაცვლად გამოიყენე ფილიალი. მაგალითად \"რა ლოკაცია გაინტერესებთ\" შეცვალე \"რომელი ფილიალი გაინტერესებთ\", \"რომელი ლოკაციით ხართ დაინტერესებული\" შეცვალე \"რომელი ფილიალით ხართ დაინტერესებული\", \"რომელი ლოკაციის ფასი გაინტერესებთ\" შეცვალე \"რომელი ფილიალის ფასი გაინტერესებთ\", და ა.შ.\n\nIf you cannot find an answer, respond with:\n\"გთხოვთ დააზუსტოთ კითხვა ან სცადოთ თავიდან.\"\n\n\n",
           "inputModeration": "",
           "maxIterations": "",
           "enableDetailedStreaming": false
@@ -619,16 +619,16 @@
       "height": 492,
       "selected": false,
       "positionAbsolute": {
-        "x": 1902.0158369285955,
-        "y": -219.00354982811683
+        "x": 1898.316325998566,
+        "y": -221.8077782681882
       },
       "dragging": false
     },
     {
       "id": "retrieverTool_0",
       "position": {
-        "x": 741.1682857777885,
-        "y": -720.2386687057385
+        "x": 826.5643669495083,
+        "y": -744.5520971343315
       },
       "type": "customNode",
       "data": {
@@ -699,8 +699,8 @@
           }
         ],
         "inputs": {
-          "name": "rag_search",
-          "description": "Use this tool to search for information about products, working hours, address, and comapny's rules. Input should be the user's specific question.",
+          "name": "rag_faq",
+          "description": "Use this tool to search for information about, working hours, address, comapny's rules and anything except prices. Input should be the user's specific question.",
           "retriever": "{{qdrant_0.data.instance}}",
           "returnSourceDocuments": false,
           "retrieverToolMetadataFilter": ""
@@ -721,16 +721,16 @@
       "height": 662,
       "selected": false,
       "positionAbsolute": {
-        "x": 741.1682857777885,
-        "y": -720.2386687057385
+        "x": 826.5643669495083,
+        "y": -744.5520971343315
       },
       "dragging": false
     },
     {
       "id": "qdrant_0",
       "position": {
-        "x": 255.4857262490604,
-        "y": -726.3542666761858
+        "x": 218.33696196512943,
+        "y": -729.1584951162573
       },
       "type": "customNode",
       "data": {
@@ -922,7 +922,7 @@
           "embeddings": "{{googleGenerativeAiEmbeddings_0.data.instance}}",
           "recordManager": "",
           "qdrantServerUrl": "http://qdrant:6333",
-          "qdrantCollection": "farmasi-vector-store-3072",
+          "qdrantCollection": "ecokids-about-vector-store-3072",
           "fileUpload": "",
           "qdrantVectorDimension": "3072",
           "contentPayloadKey": "content",
@@ -967,15 +967,15 @@
       "height": 712,
       "selected": false,
       "positionAbsolute": {
-        "x": 255.4857262490604,
-        "y": -726.3542666761858
+        "x": 218.33696196512943,
+        "y": -729.1584951162573
       },
       "dragging": false
     },
     {
       "id": "googleDrive_1",
       "position": {
-        "x": -312.6129969974173,
+        "x": -315.9125556115231,
         "y": -1076.4625441310307
       },
       "type": "customNode",
@@ -1140,7 +1140,7 @@
           }
         ],
         "inputs": {
-          "selectedFiles": "[\"1G90cb5Sq38Xsh4C_QY39L7gdsthhmc7ZdfklhVuLHX0\"]",
+          "selectedFiles": "[\"1kh96fT5k5JVIfxaMX9rVq04jzpoSPO5274SYwjv3mVc\"]",
           "folderId": "",
           "fileTypes": "[\"application/vnd.google-apps.document\"]",
           "includeSubfolders": "",
@@ -1184,7 +1184,7 @@
       "height": 1025,
       "selected": false,
       "positionAbsolute": {
-        "x": -312.6129969974173,
+        "x": -315.9125556115231,
         "y": -1076.4625441310307
       },
       "dragging": false
@@ -1192,8 +1192,8 @@
     {
       "id": "markdownTextSplitter_0",
       "position": {
-        "x": -807.3189464053496,
-        "y": -1150.5292334540059
+        "x": -786.4257328862426,
+        "y": -1147.0470312008215
       },
       "type": "customNode",
       "data": {
@@ -1275,7 +1275,7 @@
         ],
         "inputAnchors": [],
         "inputs": {
-          "chunkSize": "2000",
+          "chunkSize": 1000,
           "chunkOverlap": 200,
           "splitByHeaders": "h2"
         },
@@ -1295,8 +1295,119 @@
       "height": 479,
       "selected": false,
       "positionAbsolute": {
-        "x": -807.3189464053496,
-        "y": -1150.5292334540059
+        "x": -786.4257328862426,
+        "y": -1147.0470312008215
+      },
+      "dragging": false
+    },
+    {
+      "id": "markdownTextSplitter_1",
+      "position": {
+        "x": -748.2995634388262,
+        "y": -2287.9854613056896
+      },
+      "type": "customNode",
+      "data": {
+        "id": "markdownTextSplitter_1",
+        "label": "Markdown Text Splitter (1)",
+        "version": 1.1,
+        "name": "markdownTextSplitter",
+        "type": "MarkdownTextSplitter",
+        "baseClasses": [
+          "MarkdownTextSplitter",
+          "RecursiveCharacterTextSplitter",
+          "TextSplitter",
+          "BaseDocumentTransformer",
+          "Runnable"
+        ],
+        "category": "Text Splitters",
+        "description": "Split your content into documents based on the Markdown headers",
+        "inputParams": [
+          {
+            "label": "Chunk Size",
+            "name": "chunkSize",
+            "type": "number",
+            "description": "Number of characters in each chunk. Default is 1000.",
+            "default": 1000,
+            "optional": true,
+            "id": "markdownTextSplitter_1-input-chunkSize-number",
+            "display": true
+          },
+          {
+            "label": "Chunk Overlap",
+            "name": "chunkOverlap",
+            "type": "number",
+            "description": "Number of characters to overlap between chunks. Default is 200.",
+            "default": 200,
+            "optional": true,
+            "id": "markdownTextSplitter_1-input-chunkOverlap-number",
+            "display": true
+          },
+          {
+            "label": "Split by Headers",
+            "name": "splitByHeaders",
+            "type": "options",
+            "description": "Split documents at specified header levels. Headers will be included with their content.",
+            "default": "disabled",
+            "options": [
+              {
+                "label": "Disabled",
+                "name": "disabled"
+              },
+              {
+                "label": "# Headers (H1)",
+                "name": "h1"
+              },
+              {
+                "label": "## Headers (H2)",
+                "name": "h2"
+              },
+              {
+                "label": "### Headers (H3)",
+                "name": "h3"
+              },
+              {
+                "label": "#### Headers (H4)",
+                "name": "h4"
+              },
+              {
+                "label": "##### Headers (H5)",
+                "name": "h5"
+              },
+              {
+                "label": "###### Headers (H6)",
+                "name": "h6"
+              }
+            ],
+            "optional": true,
+            "id": "markdownTextSplitter_1-input-splitByHeaders-options",
+            "display": true
+          }
+        ],
+        "inputAnchors": [],
+        "inputs": {
+          "chunkSize": "500",
+          "chunkOverlap": "150",
+          "splitByHeaders": "h2"
+        },
+        "outputAnchors": [
+          {
+            "id": "markdownTextSplitter_1-output-markdownTextSplitter-MarkdownTextSplitter|RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable",
+            "name": "markdownTextSplitter",
+            "label": "MarkdownTextSplitter",
+            "description": "Split your content into documents based on the Markdown headers",
+            "type": "MarkdownTextSplitter | RecursiveCharacterTextSplitter | TextSplitter | BaseDocumentTransformer | Runnable"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "width": 300,
+      "height": 479,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -748.2995634388262,
+        "y": -2287.9854613056896
       },
       "dragging": false
     },
@@ -1392,7 +1503,7 @@
         "inputs": {
           "modelName": "gemini-embedding-001",
           "tasktype": "RETRIEVAL_DOCUMENT",
-          "stripNewLines": true
+          "stripNewLines": ""
         },
         "outputAnchors": [
           {
@@ -1418,7 +1529,7 @@
     {
       "id": "googleDrive_0",
       "position": {
-        "x": -337.86375556462946,
+        "x": -339.6048566912217,
         "y": -2282.374688934354
       },
       "type": "customNode",
@@ -1583,13 +1694,13 @@
           }
         ],
         "inputs": {
-          "selectedFiles": "[\"1Skkt_HCXMpElyrJRImfNpEyNR7JlHb4JKfErH3IsRL8\"]",
+          "selectedFiles": "[\"1kh96fT5k5JVIfxaMX9rVq04jzpoSPO5274SYwjv3mVc\"]",
           "folderId": "",
-          "fileTypes": "[\"application/vnd.google-apps.spreadsheet\"]",
+          "fileTypes": "[\"application/vnd.google-apps.document\"]",
           "includeSubfolders": "",
           "includeSharedDrives": "",
           "maxFiles": 50,
-          "textSplitter": "{{recursiveCharacterTextSplitter_0.data.instance}}",
+          "textSplitter": "{{markdownTextSplitter_1.data.instance}}",
           "metadata": "",
           "omitMetadataKeys": ""
         },
@@ -1627,7 +1738,7 @@
       "height": 1025,
       "selected": false,
       "positionAbsolute": {
-        "x": -337.86375556462946,
+        "x": -339.6048566912217,
         "y": -2282.374688934354
       },
       "dragging": false
@@ -1635,8 +1746,8 @@
     {
       "id": "qdrant_1",
       "position": {
-        "x": 131.44605861282622,
-        "y": -2042.905838008219
+        "x": 263.03813051772477,
+        "y": -2025.5270087673402
       },
       "type": "customNode",
       "data": {
@@ -1828,7 +1939,7 @@
           "embeddings": "{{googleGenerativeAiEmbeddings_1.data.instance}}",
           "recordManager": "",
           "qdrantServerUrl": "http://qdrant:6333",
-          "qdrantCollection": "farmasi-prices-sheet-vector-store-3072",
+          "qdrantCollection": "ecokids-prices-vector-store-3072",
           "fileUpload": "",
           "qdrantVectorDimension": "3072",
           "contentPayloadKey": "content",
@@ -1873,16 +1984,16 @@
       "height": 712,
       "selected": false,
       "positionAbsolute": {
-        "x": 131.44605861282622,
-        "y": -2042.905838008219
+        "x": 263.03813051772477,
+        "y": -2025.5270087673402
       },
       "dragging": false
     },
     {
       "id": "retrieverTool_1",
       "position": {
-        "x": 707.5234438384583,
-        "y": -1908.00034245407
+        "x": 738.1386145318004,
+        "y": -1976.9318880919498
       },
       "type": "customNode",
       "data": {
@@ -1953,8 +2064,8 @@
           }
         ],
         "inputs": {
-          "name": "price_calculator",
-          "description": "Use this tool ONLY for product details, pricing, discounts, and quotes. Requires status: unregistered, registered or vip user",
+          "name": "rag_price",
+          "description": "Use this tool ONLY for pricing, discounts, and quotes. Requires location and service name.",
           "retriever": "{{qdrant_1.data.instance}}",
           "returnSourceDocuments": false,
           "retrieverToolMetadataFilter": ""
@@ -1975,90 +2086,8 @@
       "height": 662,
       "selected": false,
       "positionAbsolute": {
-        "x": 707.5234438384583,
-        "y": -1908.00034245407
-      },
-      "dragging": false
-    },
-    {
-      "id": "recursiveCharacterTextSplitter_0",
-      "position": {
-        "x": -782.8446871114166,
-        "y": -2305.1133193032356
-      },
-      "type": "customNode",
-      "data": {
-        "id": "recursiveCharacterTextSplitter_0",
-        "label": "Recursive Character Text Splitter",
-        "version": 2,
-        "name": "recursiveCharacterTextSplitter",
-        "type": "RecursiveCharacterTextSplitter",
-        "baseClasses": [
-          "RecursiveCharacterTextSplitter",
-          "TextSplitter",
-          "BaseDocumentTransformer",
-          "Runnable"
-        ],
-        "category": "Text Splitters",
-        "description": "Split documents recursively by different characters - starting with \"\\n\\n\", then \"\\n\", then \" \"",
-        "inputParams": [
-          {
-            "label": "Chunk Size",
-            "name": "chunkSize",
-            "type": "number",
-            "description": "Number of characters in each chunk. Default is 1000.",
-            "default": 1000,
-            "optional": true,
-            "id": "recursiveCharacterTextSplitter_0-input-chunkSize-number",
-            "display": true
-          },
-          {
-            "label": "Chunk Overlap",
-            "name": "chunkOverlap",
-            "type": "number",
-            "description": "Number of characters to overlap between chunks. Default is 200.",
-            "default": 200,
-            "optional": true,
-            "id": "recursiveCharacterTextSplitter_0-input-chunkOverlap-number",
-            "display": true
-          },
-          {
-            "label": "Custom Separators",
-            "name": "separators",
-            "type": "string",
-            "rows": 4,
-            "description": "Array of custom separators to determine when to split the text, will override the default separators",
-            "placeholder": "[\"|\", \"##\", \">\", \"-\"]",
-            "additionalParams": true,
-            "optional": true,
-            "id": "recursiveCharacterTextSplitter_0-input-separators-string",
-            "display": true
-          }
-        ],
-        "inputAnchors": [],
-        "inputs": {
-          "chunkSize": "5000",
-          "chunkOverlap": 200,
-          "separators": ""
-        },
-        "outputAnchors": [
-          {
-            "id": "recursiveCharacterTextSplitter_0-output-recursiveCharacterTextSplitter-RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable",
-            "name": "recursiveCharacterTextSplitter",
-            "label": "RecursiveCharacterTextSplitter",
-            "description": "Split documents recursively by different characters - starting with \"\\n\\n\", then \"\\n\", then \" \"",
-            "type": "RecursiveCharacterTextSplitter | TextSplitter | BaseDocumentTransformer | Runnable"
-          }
-        ],
-        "outputs": {},
-        "selected": false
-      },
-      "width": 300,
-      "height": 436,
-      "selected": false,
-      "positionAbsolute": {
-        "x": -782.8446871114166,
-        "y": -2305.1133193032356
+        "x": 738.1386145318004,
+        "y": -1976.9318880919498
       },
       "dragging": false
     }
@@ -2129,6 +2158,14 @@
       "id": "markdownTextSplitter_0-markdownTextSplitter_0-output-markdownTextSplitter-MarkdownTextSplitter|RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable-googleDrive_1-googleDrive_1-input-textSplitter-TextSplitter"
     },
     {
+      "source": "markdownTextSplitter_1",
+      "sourceHandle": "markdownTextSplitter_1-output-markdownTextSplitter-MarkdownTextSplitter|RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable",
+      "target": "googleDrive_0",
+      "targetHandle": "googleDrive_0-input-textSplitter-TextSplitter",
+      "type": "buttonedge",
+      "id": "markdownTextSplitter_1-markdownTextSplitter_1-output-markdownTextSplitter-MarkdownTextSplitter|RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable-googleDrive_0-googleDrive_0-input-textSplitter-TextSplitter"
+    },
+    {
       "source": "googleGenerativeAiEmbeddings_1",
       "sourceHandle": "googleGenerativeAiEmbeddings_1-output-googleGenerativeAiEmbeddings-GoogleGenerativeAiEmbeddings|GoogleGenerativeAIEmbeddings|Embeddings",
       "target": "qdrant_1",
@@ -2159,14 +2196,6 @@
       "targetHandle": "toolAgent_0-input-tools-Tool",
       "type": "buttonedge",
       "id": "retrieverTool_1-retrieverTool_1-output-retrieverTool-RetrieverTool|DynamicTool|Tool|StructuredTool|Runnable-toolAgent_0-toolAgent_0-input-tools-Tool"
-    },
-    {
-      "source": "recursiveCharacterTextSplitter_0",
-      "sourceHandle": "recursiveCharacterTextSplitter_0-output-recursiveCharacterTextSplitter-RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable",
-      "target": "googleDrive_0",
-      "targetHandle": "googleDrive_0-input-textSplitter-TextSplitter",
-      "type": "buttonedge",
-      "id": "recursiveCharacterTextSplitter_0-recursiveCharacterTextSplitter_0-output-recursiveCharacterTextSplitter-RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable-googleDrive_0-googleDrive_0-input-textSplitter-TextSplitter"
     }
   ]
 }

@@ -496,7 +496,7 @@
       "id": "toolAgent_0",
       "position": {
         "x": 1902.0158369285955,
-        "y": -219.00354982811683
+        "y": -220.95180416916747
       },
       "type": "customNode",
       "data": {
@@ -593,12 +593,15 @@
         "inputs": {
           "tools": [
             "{{retrieverTool_0.data.instance}}",
-            "{{retrieverTool_1.data.instance}}"
+            "{{retrieverTool_1.data.instance}}",
+            "{{customTool_0.data.instance}}",
+            "{{customTool_1.data.instance}}",
+            "{{customTool_2.data.instance}}"
           ],
           "memory": "{{bufferMemory_0.data.instance}}",
           "model": "{{chatGoogleGenerativeAI_0.data.instance}}",
           "chatPromptTemplate": "",
-          "systemMessage": "შენ ხარ „FARMASI AI ასისტენტი“ — FARMASI კომპანიის პროფესიონალი, მეგობრული და სანდო ციფრული კონსულტანტი.\nFARMASI არის საერთაშორისო ლიდერი MLM (Multi Level Marketing) ინდუსტრიაში DR. C. TUNA-ს ბრენდის ქვეშ წარმოებული სამკურნალო ხაზით, დეკორატიული კოსმეტიკის, კანის მოვლის, პირადი და ჰიგიენური საშუალებების, ბიო-საოჯახო საშუალებებისა და საკვები დანამატების წარმოების სფეროში.\nკომპანია ცნობილია სუფთა და უსაფრთხო სილამაზის სტანდარტებისადმი ერთგულებით და კონკურენტუნარიანი კომპენსაციის გეგმით.\nშენი მთავარი ენაა ქართული.\n\nძირითადი მოვალეობები:\n\nუპასუხე მომხმარებლის კითხვებს:\n\nFARMASI-ს პროდუქტების შესახებ\n\nDR. C. TUNA-ს ხაზის თავისებურებებზე\n\nშემადგენლობაზე, გამოყენების წესზე და უპირატესობებზე\n\nკომპანიის ფილოსოფიასა და სტანდარტებზე\n\nბიზნეს შესაძლებლობაზე და წარმომადგენლად (Beauty Influencer) გახდომის პირობებზე\n\nსწორად განსაზღვრე მომხმარებლის მიზანი:\n\nპროდუქტის შეძენა\n\nბიზნესით დაინტერესება\n\nVIP სტატუსი\n\nთუ მომხმარებელი მოგაწვდის სახელს, ტელეფონის ნომერს ან ელფოსტას — აუცილებლად შეინახე ისინი.\n\nთუ მომხმარებელი ინტერესდება:\n\nწარმომადგენლად გახდომით\n\nVIP სტატუსით\n\nდამატებითი შემოსავლით\nაუცილებლად მოითხოვე საკონტაქტო ინფორმაცია (სახელი და ტელეფონის ნომერი) შემდგომი კონსულტაციისთვის.\n\nინსტრუმენტების (Tools) გამოყენების წესები:\n\nrag_search\nგამოიყენე, როცა მომხმარებელი კითხულობს:\n\nპროდუქტების აღწერას და კატეგორიებს\n\nკომპანიის ისტორიას და სტანდარტებს\n\nბიზნეს მოდელს და წარმომადგენლის როლს\n\nრეგისტრაციის ზოგად პირობებს\n\nprice_calculator\nგამოიყენე ნებისმიერ დროს, როცა მომხმარებელი ახსენებს სიტყვებს:\n\n„ფასი“, „ღირებულება“, „რა ღირს“, „აქცია“, „ფასდაკლება“, „კალათა“, „კატალოგის ფასი“\n\nფასების და ფასდაკლებების ლოგიკა (მნიშვნელოვანი):\n\nფასის დათვლამდე ყოველთვის უნდა დააზუსტო:\n\nპროდუქტის ზუსტი დასახელება\n\nკალათის ღირებულება\n\nმომხმარებლის სტატუსი\n→ „VIP წარმომადგენელი ხართ?“\n\n❌ თუ მომხმარებელი არ არის VIP წარმომადგენელი:\n\n50₾ – 299₾ → 10% ფასდაკლება\n\n300₾ და მეტი → 25% ფასდაკლება\n\nაუცილებლად მიუთითე, რომ VIP სტატუსით ფასდაკლება მნიშვნელოვნად იზრდება.\n\n✅ თუ მომხმარებელი არის VIP წარმომადგენელი:\n\n0₾ – 49₾ → 20% ფასდაკლება\n\n50₾ და მეტი → 30% ფასდაკლება\n\nდამატებითი წესები ფასებზე:\n\nთუ მომხმარებელი სვამს ზოგად კითხვას („რა ღირს FARMASI-ს პროდუქტები?“)\n→ დააზუსტე კონკრეტული პროდუქტი.\n\nთუ მომხმარებელმა არ იცის აქვს თუ არა VIP სტატუსი\n→ აუხსენი განსხვავება და შესთავაზე კონსულტაცია.\n\nფასდაკლება ყოველთვის უნდა გამოითვალოს price_calculator-ით, სტატუსისა და კალათის მიხედვით.\n\nბიზნეს შესაძლებლობის ლოგიკა:\n\nთუ მომხმარებელი ინტერესდება:\n\nსახლიდან მუშაობით\n\nონლაინ ბიზნესით\n\nდამატებითი ან მზარდი შემოსავლით\n\nაუხსენი:\n\nMLM მოდელის ძირითადი პრინციპები\n\nBeauty Influencer-ის როლი\n\nრომ შემოსავალი დამოკიდებულია აქტიურობაზე და გუნდურ გაყიდვებზე\n\nშემდეგ სავალდებულოდ მოითხოვე:\n\nსახელი\n\nტელეფონის ნომერი\n\nგაურკვევლობა და ესკალაცია:\n\nთუ პროდუქტი ან ინფორმაცია ვერ მოიძებნა\n\nან 2-ზე მეტ დაზუსტებაზე ვერ გაეცი ზუსტი პასუხი\n\n👉 დაუყოვნებლივ სთხოვე მომხმარებელს საკონტაქტო ინფორმაცია (სახელი და ტელეფონი) სპეციალისტთან დასაკავშირებლად.\n\nენობრივი წესები:\n\nუპასუხე იმ ენაზე, რომელზეც მომხმარებელი გესაუბრება:\n\nქართული\n\nინგლისური\n\nრუსული\n\nნაგულისხმევი ენაა ქართული.",
+          "systemMessage": "You are an AI assistant acting on behalf of a service provider.\n\nImportant: at the start of the conversation:\n- If conversation_id is not yet defined, generate a UUID v4\n- Store it in memory as conversation_id\n- Reuse the same conversation_id for all future turns\n- Never change it mid-conversation\n\nYou have access to a special tool called `emit_semantic_signals`.\n\nThis tool writes FINAL BUSINESS FACTS into the provider’s system.\nOnce written, these facts may trigger real human actions.\n\nRules:\n- Only emit signals when the user has explicitly confirmed information.\n- Never guess, infer, or assume.\n- Never emit partial data.\n- If confidence is below 0.8, do NOT emit.\n- One signal = one clear user intent or confirmed fact.\n\nIf something is unclear, ask the user instead of emitting.\n\nWhen calling emit_semantic_signals:\n\n- You MUST send valid JSON.\n- Each item in `signals` MUST include:\n  signal_id, type, confidence, source, reason.\n- Only include fields relevant to the signal type.\n- Do not include unknown fields.\n- If unsure about structure, do NOT call the tool.\n\nYou must treat emit_semantic_signals as a LIMITED resource.\n\nRules:\n- Never emit the same signal type more than once per conversation unless the value has clearly changed.\n- Never emit signals during clarification questions.\n- Never emit signals in consecutive turns.\n- If you already emitted a signal for an entity, do not emit it again unless the user explicitly corrects it.\n- Prefer under-emitting over over-emitting.\n\nBefore calling emit_semantic_signals, silently check:\n1) Is the information explicit and final?\n2) Would a human act on this immediately?\n3) Would I be embarrassed if this were wrong?\n\nIf any answer is “no” — do NOT emit.\n\nAfter calling emit_semantic_signals, you must wait at least 2 user turns\nbefore considering emitting another signal.\n\nYou MUST generate a unique turn_id at the start of every user turn.\nYou MUST log:\n- turn.start (user input)\n- every tool.call you make\n- turn.end (final response)\n\nYou should call log_trace_event with respective parameters:\n- turn.start (user input)\n- every tool.call you make\n- turn.end (final response)\n\nAt the end of every turn, you MUST call the tool log_chat_event\nwith conversation_id, the exact user message you received and the exact response you generated.\nDo not skip this step.\n\n\nპროფილის აღწერა: შენ ხარ \"სანტექნიკური კომპანია ჩალიჩას\" პროფესიონალი მომხმარებელთა მხარდაჭერის წარმომადგენელი. შენი მთავარი ენაა ქართული.\n\nძირითადი მოვალეობები:\n\n    უპასუხე კითხვებს სერვისების, ფასების და წესების შესახებ price_calculator და rag_search ხელსაწყოების გამოყენებით.\n\n    თუ მომხმარებელი მოგაწვდის სახელს ან საკონტაქტო ნომერს, აუცილებლად შეინახე ისინი.\n\n    სერვისის მოთხოვნისას, ყოველთვის გამოართვი მომხმარებელს: სახელი, ტელეფონის ნომერი და ზუსტი მისამართი.\n\nინსტრუმენტების (Tools) გამოყენების წესები:\n\n    price_calculator: გამოიყენე ეს ინსტრუმენტი ნებისმიერ დროს, როცა მომხმარებელი ახსენებს სიტყვებს: \"ფასი\", \"ღირებულება\", \"რა ჯდება\", \"აქცია\", \"ფასდაკლება\".\n\n    rag_search: გამოიყენე ეს ინსტრუმენტი ზოგადი ინფორმაციისთვის (სამუშაო საათები, სერვისების აღწერა, გარანტია და კომპანიის წესები).\n\nფასების გაცემის ლოგიკა (მნიშვნელოვანი!):\n\n    ინფორმაციის შეგროვება: სანამ ფასს დაასახელებ, აუცილებლად უნდა იცოდე სერვისი და ლოკაცია.\n\n    სპეციფიკური კითხვები: თუ მომხმარებელი ითხოვს \"შახტების ინსპექტირებას\", არ გასცე ფასი, სანამ არ გეცოდინება სართულების რაოდენობა.\n\n    ლოკაციის ფილტრი:\n\n        თუ ლოკაცია მითითებულია price_calculator-ში, დაასახელე ზუსტი ფასი და აქციები.\n\n        თუ ლოკაცია არის ისეთი ქალაქი, რომელიც არ წერია დოკუმენტში, უთხარი მომხმარებელს: \"ამ ლოკაციაზე ფასის დასაზუსტებლად საჭიროა მენეჯერის კონსულტაცია. გთხოვთ დატოვოთ თქვენი სახელი და ნომერი და მალე დაგიკავშირდებით\".\n\n    გაურკვევლობა: თუ სერვისი საერთოდ ვერ მოიძებნა ან 2-ზე მეტ შეკითხვაზე ვერ გაეცი ზუსტი პასუხი, დაუყოვნებლივ სთხოვე საკონტაქტო ინფორმაცია (სახელი და ნომერი).\n\nენობრივი წესები:\n\n    უპასუხე იმ ენაზე, რომელზეც მომხმარებელი გესაუბრება (ქართული, ინგლისური, რუსული).\n\n    ნაგულისხმევი ენაა ქართული.\n\n\n",
           "inputModeration": "",
           "maxIterations": "",
           "enableDetailedStreaming": false
@@ -620,7 +623,7 @@
       "selected": false,
       "positionAbsolute": {
         "x": 1902.0158369285955,
-        "y": -219.00354982811683
+        "y": -220.95180416916747
       },
       "dragging": false
     },
@@ -700,7 +703,7 @@
         ],
         "inputs": {
           "name": "rag_search",
-          "description": "Use this tool to search for information about products, working hours, address, and comapny's rules. Input should be the user's specific question.",
+          "description": "Use this tool to search for information about services, working hours, address, and comapny's rules. Input should be the user's specific question.",
           "retriever": "{{qdrant_0.data.instance}}",
           "returnSourceDocuments": false,
           "retrieverToolMetadataFilter": ""
@@ -922,7 +925,7 @@
           "embeddings": "{{googleGenerativeAiEmbeddings_0.data.instance}}",
           "recordManager": "",
           "qdrantServerUrl": "http://qdrant:6333",
-          "qdrantCollection": "farmasi-vector-store-3072",
+          "qdrantCollection": "chalicha-vector-store-test-history-3072",
           "fileUpload": "",
           "qdrantVectorDimension": "3072",
           "contentPayloadKey": "content",
@@ -975,7 +978,7 @@
     {
       "id": "googleDrive_1",
       "position": {
-        "x": -312.6129969974173,
+        "x": -313.61515890152907,
         "y": -1076.4625441310307
       },
       "type": "customNode",
@@ -1140,7 +1143,7 @@
           }
         ],
         "inputs": {
-          "selectedFiles": "[\"1G90cb5Sq38Xsh4C_QY39L7gdsthhmc7ZdfklhVuLHX0\"]",
+          "selectedFiles": "[\"1QWo_-kc1gE6bS_Jk6VzJ0HZEHzMzkivHASIY8GMFU88\"]",
           "folderId": "",
           "fileTypes": "[\"application/vnd.google-apps.document\"]",
           "includeSubfolders": "",
@@ -1184,7 +1187,7 @@
       "height": 1025,
       "selected": false,
       "positionAbsolute": {
-        "x": -312.6129969974173,
+        "x": -313.61515890152907,
         "y": -1076.4625441310307
       },
       "dragging": false
@@ -1192,8 +1195,8 @@
     {
       "id": "markdownTextSplitter_0",
       "position": {
-        "x": -807.3189464053496,
-        "y": -1150.5292334540059
+        "x": -786.4257328862426,
+        "y": -1147.0470312008215
       },
       "type": "customNode",
       "data": {
@@ -1275,7 +1278,7 @@
         ],
         "inputAnchors": [],
         "inputs": {
-          "chunkSize": "2000",
+          "chunkSize": 1000,
           "chunkOverlap": 200,
           "splitByHeaders": "h2"
         },
@@ -1292,11 +1295,122 @@
         "selected": false
       },
       "width": 300,
-      "height": 479,
+      "height": 480,
       "selected": false,
       "positionAbsolute": {
-        "x": -807.3189464053496,
-        "y": -1150.5292334540059
+        "x": -786.4257328862426,
+        "y": -1147.0470312008215
+      },
+      "dragging": false
+    },
+    {
+      "id": "markdownTextSplitter_1",
+      "position": {
+        "x": -748.2995634388262,
+        "y": -2287.9854613056896
+      },
+      "type": "customNode",
+      "data": {
+        "id": "markdownTextSplitter_1",
+        "label": "Markdown Text Splitter (1)",
+        "version": 1.1,
+        "name": "markdownTextSplitter",
+        "type": "MarkdownTextSplitter",
+        "baseClasses": [
+          "MarkdownTextSplitter",
+          "RecursiveCharacterTextSplitter",
+          "TextSplitter",
+          "BaseDocumentTransformer",
+          "Runnable"
+        ],
+        "category": "Text Splitters",
+        "description": "Split your content into documents based on the Markdown headers",
+        "inputParams": [
+          {
+            "label": "Chunk Size",
+            "name": "chunkSize",
+            "type": "number",
+            "description": "Number of characters in each chunk. Default is 1000.",
+            "default": 1000,
+            "optional": true,
+            "id": "markdownTextSplitter_1-input-chunkSize-number",
+            "display": true
+          },
+          {
+            "label": "Chunk Overlap",
+            "name": "chunkOverlap",
+            "type": "number",
+            "description": "Number of characters to overlap between chunks. Default is 200.",
+            "default": 200,
+            "optional": true,
+            "id": "markdownTextSplitter_1-input-chunkOverlap-number",
+            "display": true
+          },
+          {
+            "label": "Split by Headers",
+            "name": "splitByHeaders",
+            "type": "options",
+            "description": "Split documents at specified header levels. Headers will be included with their content.",
+            "default": "disabled",
+            "options": [
+              {
+                "label": "Disabled",
+                "name": "disabled"
+              },
+              {
+                "label": "# Headers (H1)",
+                "name": "h1"
+              },
+              {
+                "label": "## Headers (H2)",
+                "name": "h2"
+              },
+              {
+                "label": "### Headers (H3)",
+                "name": "h3"
+              },
+              {
+                "label": "#### Headers (H4)",
+                "name": "h4"
+              },
+              {
+                "label": "##### Headers (H5)",
+                "name": "h5"
+              },
+              {
+                "label": "###### Headers (H6)",
+                "name": "h6"
+              }
+            ],
+            "optional": true,
+            "id": "markdownTextSplitter_1-input-splitByHeaders-options",
+            "display": true
+          }
+        ],
+        "inputAnchors": [],
+        "inputs": {
+          "chunkSize": "500",
+          "chunkOverlap": "150",
+          "splitByHeaders": "h2"
+        },
+        "outputAnchors": [
+          {
+            "id": "markdownTextSplitter_1-output-markdownTextSplitter-MarkdownTextSplitter|RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable",
+            "name": "markdownTextSplitter",
+            "label": "MarkdownTextSplitter",
+            "description": "Split your content into documents based on the Markdown headers",
+            "type": "MarkdownTextSplitter | RecursiveCharacterTextSplitter | TextSplitter | BaseDocumentTransformer | Runnable"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "width": 300,
+      "height": 480,
+      "selected": false,
+      "positionAbsolute": {
+        "x": -748.2995634388262,
+        "y": -2287.9854613056896
       },
       "dragging": false
     },
@@ -1392,7 +1506,7 @@
         "inputs": {
           "modelName": "gemini-embedding-001",
           "tasktype": "RETRIEVAL_DOCUMENT",
-          "stripNewLines": true
+          "stripNewLines": ""
         },
         "outputAnchors": [
           {
@@ -1583,13 +1697,13 @@
           }
         ],
         "inputs": {
-          "selectedFiles": "[\"1Skkt_HCXMpElyrJRImfNpEyNR7JlHb4JKfErH3IsRL8\"]",
+          "selectedFiles": "[\"1P5FJl4kYEW2igneZnYG1DFLhhtZ_bUrrg5D4xq_4oL4\"]",
           "folderId": "",
-          "fileTypes": "[\"application/vnd.google-apps.spreadsheet\"]",
+          "fileTypes": "[\"application/vnd.google-apps.document\"]",
           "includeSubfolders": "",
           "includeSharedDrives": "",
           "maxFiles": 50,
-          "textSplitter": "{{recursiveCharacterTextSplitter_0.data.instance}}",
+          "textSplitter": "{{markdownTextSplitter_1.data.instance}}",
           "metadata": "",
           "omitMetadataKeys": ""
         },
@@ -1635,8 +1749,8 @@
     {
       "id": "qdrant_1",
       "position": {
-        "x": 131.44605861282622,
-        "y": -2042.905838008219
+        "x": 241.63292393771286,
+        "y": -2023.2296120573462
       },
       "type": "customNode",
       "data": {
@@ -1828,7 +1942,7 @@
           "embeddings": "{{googleGenerativeAiEmbeddings_1.data.instance}}",
           "recordManager": "",
           "qdrantServerUrl": "http://qdrant:6333",
-          "qdrantCollection": "farmasi-prices-sheet-vector-store-3072",
+          "qdrantCollection": "chalicha-prices--vector-store-test-history-3072",
           "fileUpload": "",
           "qdrantVectorDimension": "3072",
           "contentPayloadKey": "content",
@@ -1873,16 +1987,16 @@
       "height": 712,
       "selected": false,
       "positionAbsolute": {
-        "x": 131.44605861282622,
-        "y": -2042.905838008219
+        "x": 241.63292393771286,
+        "y": -2023.2296120573462
       },
       "dragging": false
     },
     {
       "id": "retrieverTool_1",
       "position": {
-        "x": 707.5234438384583,
-        "y": -1908.00034245407
+        "x": 670.1386145318005,
+        "y": -1972.9318880919498
       },
       "type": "customNode",
       "data": {
@@ -1954,7 +2068,7 @@
         ],
         "inputs": {
           "name": "price_calculator",
-          "description": "Use this tool ONLY for product details, pricing, discounts, and quotes. Requires status: unregistered, registered or vip user",
+          "description": "Use this tool ONLY for pricing, discounts, and quotes. Requires location and service name.",
           "retriever": "{{qdrant_1.data.instance}}",
           "returnSourceDocuments": false,
           "retrieverToolMetadataFilter": ""
@@ -1975,90 +2089,314 @@
       "height": 662,
       "selected": false,
       "positionAbsolute": {
-        "x": 707.5234438384583,
-        "y": -1908.00034245407
+        "x": 670.1386145318005,
+        "y": -1972.9318880919498
       },
       "dragging": false
     },
     {
-      "id": "recursiveCharacterTextSplitter_0",
+      "id": "customTool_0",
       "position": {
-        "x": -782.8446871114166,
-        "y": -2305.1133193032356
+        "x": 2131.4182407510725,
+        "y": -871.0770933444113
       },
       "type": "customNode",
       "data": {
-        "id": "recursiveCharacterTextSplitter_0",
-        "label": "Recursive Character Text Splitter",
-        "version": 2,
-        "name": "recursiveCharacterTextSplitter",
-        "type": "RecursiveCharacterTextSplitter",
+        "id": "customTool_0",
+        "label": "Custom Tool",
+        "version": 3,
+        "name": "customTool",
+        "type": "CustomTool",
         "baseClasses": [
-          "RecursiveCharacterTextSplitter",
-          "TextSplitter",
-          "BaseDocumentTransformer",
+          "CustomTool",
+          "Tool",
+          "StructuredTool",
           "Runnable"
         ],
-        "category": "Text Splitters",
-        "description": "Split documents recursively by different characters - starting with \"\\n\\n\", then \"\\n\", then \" \"",
+        "category": "Tools",
+        "description": "Use custom tool you've created in Flowise within chatflow",
         "inputParams": [
           {
-            "label": "Chunk Size",
-            "name": "chunkSize",
-            "type": "number",
-            "description": "Number of characters in each chunk. Default is 1000.",
-            "default": 1000,
-            "optional": true,
-            "id": "recursiveCharacterTextSplitter_0-input-chunkSize-number",
+            "label": "Select Tool",
+            "name": "selectedTool",
+            "type": "asyncOptions",
+            "loadMethod": "listTools",
+            "id": "customTool_0-input-selectedTool-asyncOptions",
             "display": true
           },
           {
-            "label": "Chunk Overlap",
-            "name": "chunkOverlap",
-            "type": "number",
-            "description": "Number of characters to overlap between chunks. Default is 200.",
-            "default": 200,
+            "label": "Return Direct",
+            "name": "returnDirect",
+            "description": "Return the output of the tool directly to the user",
+            "type": "boolean",
             "optional": true,
-            "id": "recursiveCharacterTextSplitter_0-input-chunkOverlap-number",
+            "id": "customTool_0-input-returnDirect-boolean",
             "display": true
           },
           {
-            "label": "Custom Separators",
-            "name": "separators",
+            "label": "Custom Tool Name",
+            "name": "customToolName",
             "type": "string",
-            "rows": 4,
-            "description": "Array of custom separators to determine when to split the text, will override the default separators",
-            "placeholder": "[\"|\", \"##\", \">\", \"-\"]",
-            "additionalParams": true,
-            "optional": true,
-            "id": "recursiveCharacterTextSplitter_0-input-separators-string",
+            "hidden": true,
+            "id": "customTool_0-input-customToolName-string",
+            "display": true
+          },
+          {
+            "label": "Custom Tool Description",
+            "name": "customToolDesc",
+            "type": "string",
+            "hidden": true,
+            "id": "customTool_0-input-customToolDesc-string",
+            "display": true
+          },
+          {
+            "label": "Custom Tool Schema",
+            "name": "customToolSchema",
+            "type": "string",
+            "hidden": true,
+            "id": "customTool_0-input-customToolSchema-string",
+            "display": true
+          },
+          {
+            "label": "Custom Tool Func",
+            "name": "customToolFunc",
+            "type": "string",
+            "hidden": true,
+            "id": "customTool_0-input-customToolFunc-string",
             "display": true
           }
         ],
         "inputAnchors": [],
         "inputs": {
-          "chunkSize": "5000",
-          "chunkOverlap": 200,
-          "separators": ""
+          "selectedTool": "ffa80af3-94b5-4836-85ff-a1b3fcd32bda",
+          "returnDirect": "",
+          "customToolName": "",
+          "customToolDesc": "",
+          "customToolSchema": "",
+          "customToolFunc": ""
         },
         "outputAnchors": [
           {
-            "id": "recursiveCharacterTextSplitter_0-output-recursiveCharacterTextSplitter-RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable",
-            "name": "recursiveCharacterTextSplitter",
-            "label": "RecursiveCharacterTextSplitter",
-            "description": "Split documents recursively by different characters - starting with \"\\n\\n\", then \"\\n\", then \" \"",
-            "type": "RecursiveCharacterTextSplitter | TextSplitter | BaseDocumentTransformer | Runnable"
+            "id": "customTool_0-output-customTool-CustomTool|Tool|StructuredTool|Runnable",
+            "name": "customTool",
+            "label": "CustomTool",
+            "description": "Use custom tool you've created in Flowise within chatflow",
+            "type": "CustomTool | Tool | StructuredTool | Runnable"
           }
         ],
         "outputs": {},
         "selected": false
       },
       "width": 300,
-      "height": 436,
+      "height": 379,
       "selected": false,
       "positionAbsolute": {
-        "x": -782.8446871114166,
-        "y": -2305.1133193032356
+        "x": 2131.4182407510725,
+        "y": -871.0770933444113
+      },
+      "dragging": false
+    },
+    {
+      "id": "customTool_1",
+      "position": {
+        "x": 1748.0739961836207,
+        "y": -834.5509795205236
+      },
+      "type": "customNode",
+      "data": {
+        "id": "customTool_1",
+        "label": "Custom Tool",
+        "version": 3,
+        "name": "customTool",
+        "type": "CustomTool",
+        "baseClasses": [
+          "CustomTool",
+          "Tool",
+          "StructuredTool",
+          "Runnable"
+        ],
+        "category": "Tools",
+        "description": "Use custom tool you've created in Flowise within chatflow",
+        "inputParams": [
+          {
+            "label": "Select Tool",
+            "name": "selectedTool",
+            "type": "asyncOptions",
+            "loadMethod": "listTools",
+            "id": "customTool_1-input-selectedTool-asyncOptions",
+            "display": true
+          },
+          {
+            "label": "Return Direct",
+            "name": "returnDirect",
+            "description": "Return the output of the tool directly to the user",
+            "type": "boolean",
+            "optional": true,
+            "id": "customTool_1-input-returnDirect-boolean",
+            "display": true
+          },
+          {
+            "label": "Custom Tool Name",
+            "name": "customToolName",
+            "type": "string",
+            "hidden": true,
+            "id": "customTool_1-input-customToolName-string",
+            "display": true
+          },
+          {
+            "label": "Custom Tool Description",
+            "name": "customToolDesc",
+            "type": "string",
+            "hidden": true,
+            "id": "customTool_1-input-customToolDesc-string",
+            "display": true
+          },
+          {
+            "label": "Custom Tool Schema",
+            "name": "customToolSchema",
+            "type": "string",
+            "hidden": true,
+            "id": "customTool_1-input-customToolSchema-string",
+            "display": true
+          },
+          {
+            "label": "Custom Tool Func",
+            "name": "customToolFunc",
+            "type": "string",
+            "hidden": true,
+            "id": "customTool_1-input-customToolFunc-string",
+            "display": true
+          }
+        ],
+        "inputAnchors": [],
+        "inputs": {
+          "selectedTool": "42b226b3-8141-4407-8987-f2cf4dccebed",
+          "returnDirect": "",
+          "customToolName": "",
+          "customToolDesc": "",
+          "customToolSchema": "",
+          "customToolFunc": ""
+        },
+        "outputAnchors": [
+          {
+            "id": "customTool_1-output-customTool-CustomTool|Tool|StructuredTool|Runnable",
+            "name": "customTool",
+            "label": "CustomTool",
+            "description": "Use custom tool you've created in Flowise within chatflow",
+            "type": "CustomTool | Tool | StructuredTool | Runnable"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "width": 300,
+      "height": 379,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1748.0739961836207,
+        "y": -834.5509795205236
+      },
+      "dragging": false
+    },
+    {
+      "id": "customTool_2",
+      "position": {
+        "x": 1184.342710230854,
+        "y": -1196.9262869559489
+      },
+      "type": "customNode",
+      "data": {
+        "id": "customTool_2",
+        "label": "Custom Tool (2)",
+        "version": 3,
+        "name": "customTool",
+        "type": "CustomTool",
+        "baseClasses": [
+          "CustomTool",
+          "Tool",
+          "StructuredTool",
+          "Runnable"
+        ],
+        "category": "Tools",
+        "description": "Use custom tool you've created in Flowise within chatflow",
+        "inputParams": [
+          {
+            "label": "Select Tool",
+            "name": "selectedTool",
+            "type": "asyncOptions",
+            "loadMethod": "listTools",
+            "id": "customTool_2-input-selectedTool-asyncOptions",
+            "display": true
+          },
+          {
+            "label": "Return Direct",
+            "name": "returnDirect",
+            "description": "Return the output of the tool directly to the user",
+            "type": "boolean",
+            "optional": true,
+            "id": "customTool_2-input-returnDirect-boolean",
+            "display": true
+          },
+          {
+            "label": "Custom Tool Name",
+            "name": "customToolName",
+            "type": "string",
+            "hidden": true,
+            "id": "customTool_2-input-customToolName-string",
+            "display": true
+          },
+          {
+            "label": "Custom Tool Description",
+            "name": "customToolDesc",
+            "type": "string",
+            "hidden": true,
+            "id": "customTool_2-input-customToolDesc-string",
+            "display": true
+          },
+          {
+            "label": "Custom Tool Schema",
+            "name": "customToolSchema",
+            "type": "string",
+            "hidden": true,
+            "id": "customTool_2-input-customToolSchema-string",
+            "display": true
+          },
+          {
+            "label": "Custom Tool Func",
+            "name": "customToolFunc",
+            "type": "string",
+            "hidden": true,
+            "id": "customTool_2-input-customToolFunc-string",
+            "display": true
+          }
+        ],
+        "inputAnchors": [],
+        "inputs": {
+          "selectedTool": "0541f853-ec1f-41a5-b94e-0b5be4f1c645",
+          "returnDirect": "",
+          "customToolName": "",
+          "customToolDesc": "",
+          "customToolSchema": "",
+          "customToolFunc": ""
+        },
+        "outputAnchors": [
+          {
+            "id": "customTool_2-output-customTool-CustomTool|Tool|StructuredTool|Runnable",
+            "name": "customTool",
+            "label": "CustomTool",
+            "description": "Use custom tool you've created in Flowise within chatflow",
+            "type": "CustomTool | Tool | StructuredTool | Runnable"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "width": 300,
+      "height": 379,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1184.342710230854,
+        "y": -1196.9262869559489
       },
       "dragging": false
     }
@@ -2129,6 +2467,14 @@
       "id": "markdownTextSplitter_0-markdownTextSplitter_0-output-markdownTextSplitter-MarkdownTextSplitter|RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable-googleDrive_1-googleDrive_1-input-textSplitter-TextSplitter"
     },
     {
+      "source": "markdownTextSplitter_1",
+      "sourceHandle": "markdownTextSplitter_1-output-markdownTextSplitter-MarkdownTextSplitter|RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable",
+      "target": "googleDrive_0",
+      "targetHandle": "googleDrive_0-input-textSplitter-TextSplitter",
+      "type": "buttonedge",
+      "id": "markdownTextSplitter_1-markdownTextSplitter_1-output-markdownTextSplitter-MarkdownTextSplitter|RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable-googleDrive_0-googleDrive_0-input-textSplitter-TextSplitter"
+    },
+    {
       "source": "googleGenerativeAiEmbeddings_1",
       "sourceHandle": "googleGenerativeAiEmbeddings_1-output-googleGenerativeAiEmbeddings-GoogleGenerativeAiEmbeddings|GoogleGenerativeAIEmbeddings|Embeddings",
       "target": "qdrant_1",
@@ -2161,12 +2507,28 @@
       "id": "retrieverTool_1-retrieverTool_1-output-retrieverTool-RetrieverTool|DynamicTool|Tool|StructuredTool|Runnable-toolAgent_0-toolAgent_0-input-tools-Tool"
     },
     {
-      "source": "recursiveCharacterTextSplitter_0",
-      "sourceHandle": "recursiveCharacterTextSplitter_0-output-recursiveCharacterTextSplitter-RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable",
-      "target": "googleDrive_0",
-      "targetHandle": "googleDrive_0-input-textSplitter-TextSplitter",
+      "source": "customTool_0",
+      "sourceHandle": "customTool_0-output-customTool-CustomTool|Tool|StructuredTool|Runnable",
+      "target": "toolAgent_0",
+      "targetHandle": "toolAgent_0-input-tools-Tool",
       "type": "buttonedge",
-      "id": "recursiveCharacterTextSplitter_0-recursiveCharacterTextSplitter_0-output-recursiveCharacterTextSplitter-RecursiveCharacterTextSplitter|TextSplitter|BaseDocumentTransformer|Runnable-googleDrive_0-googleDrive_0-input-textSplitter-TextSplitter"
+      "id": "customTool_0-customTool_0-output-customTool-CustomTool|Tool|StructuredTool|Runnable-toolAgent_0-toolAgent_0-input-tools-Tool"
+    },
+    {
+      "source": "customTool_1",
+      "sourceHandle": "customTool_1-output-customTool-CustomTool|Tool|StructuredTool|Runnable",
+      "target": "toolAgent_0",
+      "targetHandle": "toolAgent_0-input-tools-Tool",
+      "type": "buttonedge",
+      "id": "customTool_1-customTool_1-output-customTool-CustomTool|Tool|StructuredTool|Runnable-toolAgent_0-toolAgent_0-input-tools-Tool"
+    },
+    {
+      "source": "customTool_2",
+      "sourceHandle": "customTool_2-output-customTool-CustomTool|Tool|StructuredTool|Runnable",
+      "target": "toolAgent_0",
+      "targetHandle": "toolAgent_0-input-tools-Tool",
+      "type": "buttonedge",
+      "id": "customTool_2-customTool_2-output-customTool-CustomTool|Tool|StructuredTool|Runnable-toolAgent_0-toolAgent_0-input-tools-Tool"
     }
   ]
 }
